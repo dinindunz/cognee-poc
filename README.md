@@ -73,16 +73,20 @@ Cognee automatically extracts entities and relationships from stored information
 - MonetaryValue: "$1.2M"
 
 **Relationships**:
-- Acme Corp � IS_A � Organisation
-- Acme Corp � OPERATES_IN � Healthcare
-- Contract � HAS_VALUE � $1.2M
-- Contract � HAS_STATUS � Signed
+- (Acme Corp) --[IS_A]--> (Organisation)
+- (Acme Corp) --[OPERATES_IN]--> (Healthcare)
+- (Contract) --[HAS_VALUE]--> ($1.2M)
+- (Contract) --[HAS_STATUS]--> (Signed)
+
+This creates a graph where:
+- **Nodes (in parentheses)**: Entities like Acme Corp, Organisation, Healthcare, Contract, $1.2M, Signed
+- **Edges [in brackets]**: Relationships like IS_A, OPERATES_IN, HAS_VALUE, HAS_STATUS that connect the nodes
 
 ### What the Visualisation Shows
 
-- **Nodes**: Entities (Organisations, Industries, Contracts, Monetary Values, etc.)
-- **Edges**: Relationships (IS_A, OPERATES_IN, HAS_VALUE, HAS_STATUS, etc.)
-- **Interactive**: Click and drag nodes, zoom in/out to explore connections
+- **Nodes**: Entities (Organisations, Industries, Contracts, Monetary Values, Status, etc.)
+- **Edges**: Relationships connecting nodes (IS_A, OPERATES_IN, HAS_VALUE, HAS_STATUS, etc.)
+- **Interactive**: Click and drag nodes, zoom in/out to explore the knowledge graph connections
 
 ## Database Storage
 
